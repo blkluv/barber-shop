@@ -3,7 +3,7 @@ import CustomLink from "../customLink";
 
 export default function NavLinks(): React.JSX.Element {
     return (
-        <ul className="gap-6 flex">
+        <ul className="gap-6 hidden md:flex">
             <li>
                 <CustomLink href={'/'} title={'Acasa'} />
             </li>

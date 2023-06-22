@@ -8,6 +8,7 @@ module.exports = {
       backgroundColor: {
         main: 'var(--color-bg-main)',
         secondary: 'var(--color-bg-secondary)',
+        overlay: 'var(--color-bg-overlay)',
       },
       textColor: {
         bright: 'var(--color-text-bright)',
