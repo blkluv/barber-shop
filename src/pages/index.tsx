@@ -1,14 +1,14 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from 'components/layout';
 
-export default function Home() {
+import Layout from 'components/layout';
+
+
+export default function Home(): React.JSX.Element {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Barber Shop Website</title>
       </Head>
-      <section>
-      </section>
     </Layout>
   );
 }
