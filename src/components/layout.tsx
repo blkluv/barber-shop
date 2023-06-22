@@ -1,16 +1,16 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
 
-export const siteTitle = 'Next.js Sample Website';
+import Navbar from './Navbar/navbar';
 
 interface LayoutProps {
-    children: ReactNode
-    home: Boolean
+  children: ReactNode
+  home: Boolean
 }
 
-export default function Layout({ children, home }: LayoutProps) {
+export default function Layout({ children }: LayoutProps): React.JSX.Element {
   return (
-    <div>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -18,9 +18,11 @@ export default function Layout({ children, home }: LayoutProps) {
           content="Barber-shop website"
         />
       </Head>
-      <header>
+
+      <header className='h-screen'>
+        <Navbar />
       </header>
       <main>{children}</main>
-    </div>
+    </>
   );
 }
