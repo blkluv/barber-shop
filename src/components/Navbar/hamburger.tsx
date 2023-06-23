@@ -11,7 +11,7 @@ export default function Hamburger(): React.JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="center">
+    <div className="center block md:hidden">
       <IconButton
         id="basic-button"
         aria-controls={isOpen ? "basic-menu" : undefined}

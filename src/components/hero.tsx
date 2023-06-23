@@ -46,12 +46,11 @@ export default function Hero({ handleClick }: HeroProps): React.JSX.Element {
                 </motion.button>
                 <motion.button
                     key="schedule-button"
-                    initial={{ x: -20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{ delay: 0.4, duration: 0.4 }}
                     exit={{
                         opacity: 0,
-                        x: 90,
                         transition: {
                             ease: "easeInOut",
                             delay: 1.4,
