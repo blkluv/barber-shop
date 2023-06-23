@@ -18,7 +18,7 @@ export const Loader = ({ finishLoading }: LoaderProps): React.JSX.Element => {
 
   return (
     <div className="flex flex-col items-center justify-center z-50 h-screen bg-main w-full absolute top-0 left-0">
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         <motion.div
           key="logo"
           initial={{ opacity: 0 }}

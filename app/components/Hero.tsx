@@ -9,12 +9,12 @@ export const Hero = (): React.JSX.Element => {
 
   return (
     <div className="hero flex gap-2 flex-col items-center justify-center">
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         <motion.h1
           key="header"
           initial={{ x: -70, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.7 }}
           exit={{
             opacity: 0,
             x: 90,
@@ -31,7 +31,7 @@ export const Hero = (): React.JSX.Element => {
           key="address"
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.7 }}
           exit={{
             opacity: 0,
             x: 90,
@@ -52,7 +52,7 @@ export const Hero = (): React.JSX.Element => {
           key="schedule-button"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.7 }}
           exit={{
             opacity: 0,
             transition: {

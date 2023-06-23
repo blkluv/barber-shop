@@ -11,7 +11,7 @@ export const CustomLayout = ({ children }: { children: ReactNode }) => {
 
   return (
     <MapRefProvider>
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {isLoading ? (
           <motion.div
             key={"loader"}
