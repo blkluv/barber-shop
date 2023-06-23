@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { LayoutGroup, AnimatePresence, motion } from "framer-motion";
 
 import { Loader } from "@/components";
 import { MapRefProvider } from "@/providers/MapRefProvider";
@@ -11,26 +11,29 @@ export const CustomLayout = ({ children }: { children: ReactNode }) => {
 
   return (
     <MapRefProvider>
-      <AnimatePresence initial={false}>
-        {isLoading ? (
-          <motion.div
-            key={"loader"}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            exit={{
-              y: "calc(-100vh)",
-              transition: {
-                ease: "easeInOut",
-                duration: 1,
-                delay: 1.5,
-              },
-            }}
-          >
-            <Loader finishLoading={() => setIsLoading(false)} />
-          </motion.div>
-        ) : (
-          <motion.div>{children}</motion.div>
-        )}
-      </AnimatePresence>
+      <LayoutGroup>
+        <AnimatePresence>
+          {isLoading ? (
+            <motion.div
+              className="flex flex-col items-center justify-center z-50 h-screen bg-main w-full absolute top-0 left-0"
+              key={"loader"}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              exit={{
+                y: "calc(-100vh)",
+                transition: {
+                  ease: "easeInOut",
+                  duration: 1,
+                  delay: 1.5,
+                },
+              }}
+            >
+              <Loader finishLoading={() => setIsLoading(false)} />
+            </motion.div>
+          ) : (
+            <motion.div>{children}</motion.div>
+          )}
+        </AnimatePresence>
+      </LayoutGroup>
     </MapRefProvider>
   );
 };
