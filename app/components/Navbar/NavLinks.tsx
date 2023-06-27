@@ -3,7 +3,7 @@ import { PAGES, capitalize } from "@/utils";
 
 export const NavLinks = (): React.JSX.Element => {
   return (
-    <ul className="gap-6 hidden md:flex">
+    <ul className="p-lg hidden gap-6 md:flex">
       {PAGES.map((page) => (
         <li key={page.title}>
           <CustomLink

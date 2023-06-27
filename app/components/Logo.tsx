@@ -19,7 +19,7 @@ export const Logo = ({
         width={width}
         height={height}
         sizes="100%"
-        alt="barber-shop logo"
+        alt="website logo"
         priority
         className={classes}
       />

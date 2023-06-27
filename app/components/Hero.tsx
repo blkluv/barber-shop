@@ -1,17 +1,15 @@
 "use client";
 
-import { useMapRef } from "@/hooks/useMapRef";
+import { motion } from "framer-motion";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { motion, AnimatePresence } from "framer-motion";
+
+import { useMapRef } from "@/hooks/useMapRef";
 
 export const Hero = (): React.JSX.Element => {
   const { handleClick } = useMapRef();
 
   return (
-    <motion.div
-      key="hero"
-      className="hero flex gap-2 flex-col items-center justify-center"
-    >
+    <motion.section key="hero" className="hero col-center gap-2">
       <motion.h1
         key="header"
         initial={{ x: -70, opacity: 0 }}
@@ -25,7 +23,7 @@ export const Hero = (): React.JSX.Element => {
             delay: 1.4,
           },
         }}
-        className="font-bold text-4xl md:text-7xl text-center"
+        className="heading-lg md:heading-xl text-center font-bold"
       >
         Sergiu Barbershop
       </motion.h1>
@@ -43,12 +41,10 @@ export const Hero = (): React.JSX.Element => {
           },
         }}
         onClick={handleClick}
-        className="flex justify-center items-center"
+        className="row-center link"
       >
-        <LocationOnIcon className="text-hover mr-1" />
-        <span className="text-base md:text-lg">
-          Strada Aurel Vlaicu 54, Iași
-        </span>
+        <LocationOnIcon className="accent-secondary mr-1" />
+        <span className="p-base md:p-lg">Strada Aurel Vlaicu 54, Iași</span>
       </motion.button>
       <motion.button
         key="schedule-button"
@@ -62,10 +58,10 @@ export const Hero = (): React.JSX.Element => {
             delay: 1.4,
           },
         }}
-        className="bg-orange-400 hover:bg-orange-300 px-4 py-2 rounded-xl shadow-xl text-dark mt-6 transition duration-300 ease-in-out"
+        className="border-muted transition-primary mt-6 rounded-sm bg-transparent px-4 py-2 hover:bg-btn-hover hover:text-dark"
       >
         Programeaza
       </motion.button>
-    </motion.div>
+    </motion.section>
   );
 };

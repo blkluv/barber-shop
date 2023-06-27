@@ -4,8 +4,8 @@ import { Logo } from "../Logo";
 
 export const Navbar = (): React.JSX.Element => {
   return (
-    <nav className="bg-main h-full max-h-20 flex items-center justify-center px-4 sm:px-6 lg:px-14 py-2">
-      <div className="max-w-2xl lg:max-w-6xl w-full flex justify-between items-center">
+    <nav className="row-center h-full max-h-20 px-4 py-2 sm:px-6 lg:px-14">
+      <div className="row-between w-full max-w-2xl lg:max-w-6xl">
         <Logo width={64} height={64} classes="w-16 h-16" />
         <Hamburger />
         <NavLinks />

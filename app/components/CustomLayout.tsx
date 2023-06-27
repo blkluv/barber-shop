@@ -15,7 +15,7 @@ export const CustomLayout = ({ children }: { children: ReactNode }) => {
         <AnimatePresence>
           {isLoading ? (
             <motion.div
-              className="flex flex-col items-center justify-center z-50 h-screen bg-main w-full absolute top-0 left-0"
+              className="col-center absolute left-0 top-0 z-50 h-screen w-full bg-main"
               key={"loader"}
               transition={{ duration: 0.4, delay: 0.2 }}
               exit={{

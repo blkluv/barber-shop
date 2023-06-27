@@ -5,8 +5,9 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import { CustomLink } from "@/components";
 import { MenuButton } from "./MenuButton";
-import { SocialLinks } from "./SocialLinks";
+import { SocialLinks } from "../SocialLinks";
 import { PAGES, capitalize } from "@/utils";
+import { TRANSITION_PRIMARY } from "@/utils/constants";
 
 export const Hamburger = (): React.JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +16,8 @@ export const Hamburger = (): React.JSX.Element => {
     <div className="center block md:hidden">
       <MenuButton isOpen={isOpen} setIsOpen={setIsOpen}>
         <MenuRoundedIcon
-          sx={{ fontSize: 40, transition: "all 0.3s ease-in-out" }}
-          className="hover:text-hover text-bright"
+          sx={{ fontSize: 40, transition: `${TRANSITION_PRIMARY}` }}
+          className="hover:text-hover"
         />
       </MenuButton>
       <AnimatePresence>
@@ -24,7 +25,7 @@ export const Hamburger = (): React.JSX.Element => {
           <>
             <motion.ul
               key="hamburger"
-              className="flex fixed items-center justify-center font-bold text-3xl left-0 top-0 z-10 h-screen w-full flex-col gap-4 bg-main text-bright"
+              className="fixed left-0 top-0 z-10 flex h-screen w-full flex-col items-center justify-center gap-4 bg-main text-4xl font-bold text-bright"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.2 }}
@@ -39,7 +40,7 @@ export const Hamburger = (): React.JSX.Element => {
             >
               <motion.li
                 key="close-menu"
-                className="absolute top-6 right-6"
+                className="absolute right-6 top-6"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.4 }}
@@ -53,8 +54,8 @@ export const Hamburger = (): React.JSX.Element => {
               >
                 <MenuButton isOpen={isOpen} setIsOpen={setIsOpen}>
                   <CloseIcon
-                    sx={{ fontSize: 40, transition: "all 0.3s ease-in-out" }}
-                    className="hover:text-hover text-bright"
+                    sx={{ fontSize: 40, transition: `${TRANSITION_PRIMARY}` }}
+                    className="text-bright hover:text-hover"
                   />
                 </MenuButton>
               </motion.li>

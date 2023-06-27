@@ -3,13 +3,13 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 export const SocialLinks = (): React.JSX.Element => {
   return (
-    <>
-      <a href="#" className="link">
-        <InstagramIcon fontSize="large" />
+    <div className="w-fit">
+      <a href="#" className="link mr-2">
+        <InstagramIcon sx={{ fontSize: "40px" }} />
       </a>
       <a href="#" className="link">
-        <FacebookIcon fontSize="large" />
+        <FacebookIcon sx={{ fontSize: "40px" }} />
       </a>
-    </>
+    </div>
   );
 };

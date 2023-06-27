@@ -5,25 +5,105 @@
 @layer base {
   :root {
     --color-text-bright: #f0e8e8;
-    --color-text-dark: #252945;
+    --color-text-dark: #110e09;
+    --color-text-muted: #707070;
     --color-text-hover: #e0b185;
-    --color-bg-main: #11121f;
+    --color-text-accent: #df832e;
+    --color-text-accent-secondary: #e0b185;
+    --color-bg-main: #110e09;
     --color-bg-secondary: #ffedd5;
     --color-bg-overlay: rgba(0, 0, 0, 0.6);
+    --color-btn-hover: #e0b185;
+    --color-border-muted: #707070;
+    --color-border-dark: #353535;
   }
 }
 
 @layer utilities {
-  .link {
-    @apply text-bright transition duration-300 ease-in-out;
+  .transition-primary {
+    @apply transition duration-300 ease-in-out;
   }
 
-  .link:hover {
-    @apply text-hover;
+  .accent {
+    @apply text-accent;
+  }
+
+  .accent-secondary {
+    @apply text-accent-secondary;
+  }
+
+  .heading-lg,
+  .heading-md,
+  .heading-xl {
+    @apply font-bold;
+  }
+
+  .heading-sm {
+    @apply text-2xl;
+  }
+
+  .heading-md {
+    @apply text-3xl;
+  }
+
+  .heading-lg {
+    @apply text-4xl;
+  }
+
+  .heading-xl {
+    @apply text-6xl;
+  }
+
+  .p-base {
+    @apply text-base;
+  }
+
+  .p-sm {
+    @apply text-sm;
+  }
+
+  .p-lg {
+    @apply text-lg;
+  }
+
+  .link {
+    @apply transition-primary text-bright hover:text-hover;
+  }
+
+  .link-muted {
+    @apply transition-primary text-muted hover:text-white;
   }
 
   .active {
     @apply text-hover;
+  }
+
+  .border-muted {
+    @apply border border-clr-muted;
+  }
+
+  .border-dark-t {
+    @apply border-t-[1px] border-clr-dark;
+  }
+
+  .col {
+    @apply flex flex-col;
+  }
+
+  .col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .row-center {
+    @apply flex flex-row items-center justify-center;
+  }
+
+  .col-between {
+    @apply flex flex-col items-center justify-between;
+  }
+
+  .row-between {
+    @apply flex items-center justify-between;
   }
 }
 
@@ -35,11 +115,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
-  font-size: 16px;
   color: var(--color-text-bright);
+  background: var(--color-bg-main);
   min-height: 100vh;
 }
 
