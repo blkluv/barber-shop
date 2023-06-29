@@ -25,6 +25,7 @@ export const CustomLayout = ({ children }: { children: ReactNode }) => {
                   delay: 1.5,
                 },
               }}
+              className="col-center absolute left-0 top-0 z-50 h-screen w-full bg-main"
             >
               <Loader finishLoading={() => setIsLoading(false)} />
             </motion.div>

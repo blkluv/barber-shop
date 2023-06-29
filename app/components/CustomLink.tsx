@@ -6,9 +6,11 @@ interface CustomLinkProps {
   onClick?: () => void;
   href: Url;
   title: String;
+  classes?: string;
 }
 
 export const CustomLink = ({
+  classes,
   onClick,
   href,
   title,
@@ -18,7 +20,9 @@ export const CustomLink = ({
   return (
     <Link
       onClick={onClick}
-      className={currentRoute === href ? "active link" : "link"}
+      className={
+        currentRoute === href ? `link active ${classes}` : `link ${classes}`
+      }
       href={href}
     >
       {title}

@@ -18,7 +18,7 @@ module.exports = {
         "accent-secondary": "var(--color-text-accent-secondary)",
       },
       borderColor: {
-        "clr-accent": "var(--color-btn-accent)",
+        "clr-accent": "var(--color-border-accent)",
         "clr-muted": "var(--color-border-muted)",
         "clr-dark": "var(--color-border-dark)",
       },
@@ -27,6 +27,9 @@ module.exports = {
       },
       height: {
         140: "560px",
+      },
+      screens: {
+        xs: "400px",
       },
     },
   },

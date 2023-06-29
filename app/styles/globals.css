@@ -16,6 +16,7 @@
     --color-btn-hover: #e0b185;
     --color-border-muted: #707070;
     --color-border-dark: #353535;
+    --color-border-accent: #e0b185;
   }
 }
 
@@ -34,7 +35,8 @@
 
   .heading-lg,
   .heading-md,
-  .heading-xl {
+  .heading-xl,
+  .heading-2xl {
     @apply font-bold;
   }
 
@@ -54,6 +56,10 @@
     @apply text-6xl;
   }
 
+  .heading-2xl {
+    @apply text-8xl;
+  }
+
   .p-base {
     @apply text-base;
   }
@@ -70,20 +76,12 @@
     @apply text-lg;
   }
 
-  .link {
-    @apply transition-primary text-bright hover:text-hover;
-  }
-
-  .link-muted {
-    @apply transition-primary text-muted hover:text-white;
-  }
-
   .active {
-    @apply text-hover;
+    @apply text-hover !important;
   }
 
   .border-muted {
-    @apply border border-clr-muted;
+    @apply border-2 border-clr-muted;
   }
 
   .border-dark-t {
@@ -109,6 +107,56 @@
   .row-between {
     @apply flex items-center justify-between;
   }
+
+  .underlined:before {
+    opacity: 0;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-text-hover);
+    @apply transition-primary;
+  }
+
+  .link:hover.underlined:before {
+    opacity: 1;
+  }
+
+  .active.underlined:before,
+  .subtitle.underlined:before {
+    opacity: 1;
+  }
+}
+
+@layer components {
+  .book-btn {
+    @apply hover:border-muted md:heading-sm transition-primary z-10 mt-8 rounded-3xl border-2 
+    border-clr-accent bg-btn-hover px-8 py-2 text-sm uppercase text-dark shadow-xl hover:bg-transparent hover:text-bright sm:text-base;
+  }
+
+  .link {
+    @apply transition-primary text-bright hover:text-hover;
+  }
+
+  .link-muted {
+    @apply transition-primary text-muted hover:text-white;
+  }
+
+  .image {
+    filter: grayscale();
+    @apply transition-primary;
+  }
+
+  .image:hover {
+    filter: none;
+  }
+
+  .logo {
+    @apply w-fit text-xl font-bold text-accent-secondary sm:text-2xl md:text-3xl;
+    @apply leading-none !important;
+  }
 }
 
 * {
@@ -131,8 +179,5 @@ img {
 }
 
 .hero {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
-    url("/images/bg.jpg") no-repeat;
-  background-size: cover;
   height: calc(100vh - 80px);
 }

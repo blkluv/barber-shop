@@ -16,7 +16,7 @@ export const Loader = ({ finishLoading }: LoaderProps): React.JSX.Element => {
   }, [finishLoading]);
 
   return (
-    <div className="col-center absolute left-0 top-0 z-50 h-screen w-full bg-main">
+    <>
       <motion.h1
         key="title"
         initial={{ x: -100, opacity: 0 }}
@@ -35,6 +35,6 @@ export const Loader = ({ finishLoading }: LoaderProps): React.JSX.Element => {
       >
         {capitalize(pathname.slice(1)) || "Acasa"}
       </motion.h2>
-    </div>
+    </>
   );
 };

@@ -6,7 +6,7 @@ export const Map = () => {
   const { ref } = useMapRef();
 
   return (
-    <section ref={ref}>
+    <section ref={ref} className="py-6">
       <iframe
         height="550"
         style={{ border: 0 }}
