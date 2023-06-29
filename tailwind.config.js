@@ -23,7 +23,7 @@ module.exports = {
         "clr-dark": "var(--color-border-dark)",
       },
       fontFamily: {
-        cabin: ["var(--font-cabin)"],
+        openSans: ["var(--font-openSans)"],
       },
       height: {
         140: "560px",
