@@ -35,10 +35,10 @@ export const Footer = (): React.JSX.Element => {
           </ul>
         </div>
       </section>
-      <section className="border-dark-t col-center md:row-center p-sm md:p-base py-6 text-muted md:py-10">
+      <section className="border-dark-t col-center md:row-center p-xs md:p-sm py-6 text-muted md:py-10">
         <span className="mr-2">{COPYRIGHT}</span>
         <span className="hidden md:block">-</span>
-        <a href="#" className="link-muted ml-2 mr-2">
+        <a href="#" className="link-muted ml-2 mr-2 font-extralight">
           Politica de confidentialitate
         </a>
         <span className="hidden md:block">-</span>

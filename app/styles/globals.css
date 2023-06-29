@@ -10,7 +10,7 @@
     --color-text-hover: #e0b185;
     --color-text-accent: #df832e;
     --color-text-accent-secondary: #e0b185;
-    --color-bg-main: #110e09;
+    --color-bg-main: #000000;
     --color-bg-secondary: #ffedd5;
     --color-bg-overlay: rgba(0, 0, 0, 0.6);
     --color-btn-hover: #e0b185;
@@ -56,6 +56,10 @@
 
   .p-base {
     @apply text-base;
+  }
+
+  .p-xs {
+    @apply text-xs;
   }
 
   .p-sm {
@@ -127,7 +131,7 @@ img {
 }
 
 .hero {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
     url("/images/bg.jpg") no-repeat;
   background-size: cover;
   height: calc(100vh - 80px);

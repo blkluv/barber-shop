@@ -36,3 +36,15 @@ export const CONTACTS_LIST = [
     icon: <MailIcon />,
   },
 ];
+
+export const GALLERY_PHOTOS = [
+  { src: "/images/gallery-photo-1.jpg", width: 1080, height: 1080 },
+  { src: "/images/gallery-photo-2.jpg", width: 1080, height: 1350 },
+  { src: "/images/gallery-photo-3.jpg", width: 1080, height: 1328 },
+  { src: "/images/gallery-photo-4.jpg", width: 1080, height: 1104 },
+  { src: "/images/gallery-photo-5.jpg", width: 1080, height: 1310 },
+  { src: "/images/gallery-photo-6.jpg", width: 1080, height: 1350 },
+  { src: "/images/gallery-photo-7.jpg", width: 1080, height: 1350 },
+  { src: "/images/gallery-photo-8.jpg", width: 1080, height: 1350 },
+  { src: "/images/gallery-photo-9.jpg", width: 1080, height: 1080 },
+];

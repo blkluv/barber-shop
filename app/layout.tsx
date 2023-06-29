@@ -28,7 +28,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <Navbar />
           </header>
           <main>{children}</main>
-          <div className="h-screen"></div>
           <Footer />
         </CustomLayout>
       </body>
