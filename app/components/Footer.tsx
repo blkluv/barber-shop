@@ -25,7 +25,7 @@ export const Footer = (): React.JSX.Element => {
             ))}
           </ul>
           <SocialLinks />
-          <button className="book-btn">Fa o programare</button>
+          <button className="booking-btn">Fa o programare</button>
         </div>
         <div className="mt-8 hidden justify-center md:mt-0 md:flex md:justify-end">
           <ul className="col w-fit gap-3 text-center md:gap-4 md:text-start">

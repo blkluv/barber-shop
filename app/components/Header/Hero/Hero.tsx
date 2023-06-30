@@ -44,7 +44,7 @@ export const Hero = (): React.JSX.Element => {
           },
         }}
         onClick={handleClick}
-        className="row-center link z-10 mt-4"
+        className="row-center link z-10"
       >
         <LocationOnIcon className="accent-secondary mr-1" />
         <span className="p-base md:p-lg">Strada Aurel Vlaicu 54</span>
@@ -61,7 +61,7 @@ export const Hero = (): React.JSX.Element => {
             delay: 1.4,
           },
         }}
-        className="book-btn"
+        className="booking-btn"
       >
         Fa o programare
       </motion.button>

@@ -6,7 +6,7 @@
   :root {
     --color-text-bright: #f0e8e8;
     --color-text-dark: #110e09;
-    --color-text-muted: #707070;
+    --color-text-muted: #8a8888;
     --color-text-hover: #e0b185;
     --color-text-accent: #df832e;
     --color-text-accent-secondary: #e0b185;
@@ -131,9 +131,9 @@
 }
 
 @layer components {
-  .book-btn {
-    @apply hover:border-muted md:heading-sm transition-primary z-10 mt-8 rounded-3xl border-2 
-    border-clr-accent bg-btn-hover px-8 py-2 text-sm uppercase text-dark shadow-xl hover:bg-transparent hover:text-bright sm:text-base;
+  .booking-btn {
+    @apply hover:border-muted transition-primary z-10 mt-8 rounded-3xl border-2 border-clr-accent 
+    bg-btn-hover px-8 py-2 text-sm uppercase text-dark shadow-xl hover:bg-transparent hover:text-bright sm:text-base md:text-lg;
   }
 
   .link {
@@ -154,8 +154,12 @@
   }
 
   .logo {
-    @apply w-fit text-xl font-bold text-accent-secondary sm:text-2xl md:text-3xl;
+    @apply transition-primary w-fit text-xl font-bold text-accent-secondary hover:text-bright sm:text-2xl md:text-3xl;
     @apply leading-none !important;
+  }
+
+  header .cld-video-player {
+    @apply absolute left-0 top-0 h-full w-full object-cover opacity-30;
   }
 }
 
