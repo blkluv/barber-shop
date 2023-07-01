@@ -154,7 +154,7 @@
   }
 
   .logo {
-    @apply transition-primary w-fit text-xl font-bold text-accent-secondary hover:text-bright sm:text-2xl md:text-3xl;
+    @apply transition-primary w-fit font-bold text-accent-secondary hover:text-bright;
     @apply leading-none !important;
   }
 
@@ -182,6 +182,6 @@ img {
   display: block;
 }
 
-.hero {
+/* .hero {
   height: calc(100vh - 80px);
-}
+} */

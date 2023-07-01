@@ -5,7 +5,7 @@ import { Hero } from "./Hero/Hero";
 
 export const Header = (): React.JSX.Element => {
   return (
-    <header className="relative">
+    <header className="relative min-h-screen">
       <video
         muted
         autoPlay

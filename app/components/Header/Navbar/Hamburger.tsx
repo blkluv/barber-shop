@@ -9,6 +9,7 @@ import { CustomLink, SocialLinks } from "@/components";
 import { MenuButton } from "./MenuButton";
 import { PAGES, capitalize } from "@/utils";
 import { TRANSITION_PRIMARY } from "@/utils/constants";
+import Image from "next/image";
 
 export const Hamburger = (): React.JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,10 +24,45 @@ export const Hamburger = (): React.JSX.Element => {
       </MenuButton>
       <AnimatePresence>
         {isOpen && (
-          <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            exit={{
+              opacity: 0,
+              transition: {
+                ease: "easeInOut",
+                duration: 0.4,
+                delay: 2,
+              },
+            }}
+            className="col-center fixed left-0 top-0 h-screen w-full bg-main "
+          >
+            <motion.div
+              initial={{ x: 200, y: -200, opacity: 0 }}
+              animate={{ x: 0, y: 0, opacity: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              exit={{
+                opacity: 0,
+                transition: {
+                  ease: "easeInOut",
+                  duration: 0.4,
+                  delay: 1.5,
+                },
+              }}
+              className="absolute right-0 top-0 max-h-80 max-w-xs rounded-xl opacity-20"
+            >
+              <Image
+                src={"/images/bg.jpg"}
+                alt=""
+                width={4000}
+                height={6000}
+                className="rounded-bl-full"
+              />
+            </motion.div>
             <motion.ul
               key="hamburger"
-              className="fixed left-0 top-0 flex h-screen w-full flex-col items-center justify-center gap-4 bg-main text-4xl font-bold text-bright"
+              className="col-center gap-4 text-4xl font-bold text-bright"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.2 }}
@@ -95,12 +131,12 @@ export const Hamburger = (): React.JSX.Element => {
                     delay: 0.6,
                   },
                 }}
-                className="flex gap-2"
+                className="mt-8 flex gap-2"
               >
                 <SocialLinks />
               </motion.li>
             </motion.ul>
-          </>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>

@@ -3,16 +3,15 @@ import { SocialLinks } from "./SocialLinks";
 import { CustomLink } from "./CustomLink";
 import { PAGES, capitalize } from "@/utils";
 import { CONTACTS_LIST, COPYRIGHT } from "@/utils/constants";
+import { Logo } from "./Logo";
 
 export const Footer = (): React.JSX.Element => {
   return (
-    <footer className="col container mx-auto h-screen items-center justify-between gap-12 px-2 sm:px-0 md:gap-16">
-      <section className="m-auto my-8 grid h-full w-full items-center md:max-w-2xl md:grid-cols-2 lg:max-w-3xl xl:max-w-5xl">
-        <div className="col-center text-center md:items-start md:gap-4 md:text-start">
-          <h2 className="heading-lg md:heading-xl mb-8 w-fit text-accent-secondary">
-            Sergiu Barbershop
-          </h2>
-          <h3 className="mb-4 w-fit text-2xl font-thin text-muted">
+    <footer className="col container mx-auto min-h-screen items-center justify-between px-2 sm:px-0">
+      <section className="m-auto my-8 grid w-full grow items-center md:max-w-2xl md:grid-cols-2 lg:max-w-3xl xl:max-w-5xl">
+        <div className="col-center gap-2 text-center md:items-start md:gap-4 md:text-start">
+          <Logo sizes={"heading-lg md:heading-xl"} />
+          <h3 className="my-4 w-fit text-2xl font-thin text-muted">
             Strada Aurel Vlaicu 54
             <br />
             Iași 707252

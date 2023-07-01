@@ -16,7 +16,9 @@ export const CustomLayout = ({ children }: { children: ReactNode }) => {
           {isLoading ? (
             <motion.div
               key={"loader"}
-              transition={{ duration: 0.4, delay: 0.2 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               exit={{
                 y: "calc(-100vh)",
                 transition: {

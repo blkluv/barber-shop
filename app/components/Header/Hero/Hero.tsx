@@ -11,7 +11,7 @@ export const Hero = (): React.JSX.Element => {
   return (
     <motion.section
       key="hero"
-      className="hero col-center z-10 h-full w-full gap-2"
+      className="hero col-center z-10 min-h-screen w-full gap-2 tall:pb-4 tall:pt-20"
     >
       <motion.h1
         key="header"
@@ -30,6 +30,7 @@ export const Hero = (): React.JSX.Element => {
       >
         Barbershop-ul tau in Iasi
       </motion.h1>
+
       <motion.button
         key="address"
         initial={{ x: -20, opacity: 0 }}

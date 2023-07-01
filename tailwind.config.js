@@ -30,6 +30,7 @@ module.exports = {
       },
       screens: {
         xs: "400px",
+        tall: { raw: "(max-height: 800px)" },
       },
     },
   },
