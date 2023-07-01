@@ -13,6 +13,20 @@ export const Hero = (): React.JSX.Element => {
       key="hero"
       className="hero col-center z-10 min-h-screen w-full gap-2 tall:pb-4 tall:pt-20"
     >
+      <video
+        muted
+        autoPlay
+        loop
+        className="absolute left-0 top-0 h-full w-full object-cover opacity-30"
+        poster="/images/bg.jpg"
+      >
+        <source
+          src={
+            "https://res.cloudinary.com/dwdb9zdiu/video/upload/q_auto:eco/f_auto/dpr_auto/v1688124893/sergiu-barbershop/hero-bg-video_xcftft.mp4"
+          }
+          type="video/mp4"
+        />
+      </video>
       <motion.h1
         key="header"
         initial={{ x: -70, opacity: 0 }}

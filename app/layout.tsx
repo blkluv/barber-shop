@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 
-import { CustomLayout, Footer, Header } from "@/components";
+import { CustomLayout, Footer, Navbar } from "@/components";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -24,7 +24,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="ro">
       <body className={openSans.className}>
         <CustomLayout>
-          <Header />
+          <header className="relative">
+            <Navbar />
+          </header>
           <main>{children}</main>
           <Footer />
         </CustomLayout>
