@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import { BARBERS } from "@/utils";
 import { SectionLayout } from "@/components";
@@ -58,12 +59,14 @@ export const Team = () => {
               sm={4}
               md={4}
             >
-              <BarberCard
-                src={barber.src}
-                height={barber.height}
-                width={barber.width}
-                name={barber.name}
-              />
+              <Link href={"/"} className="flex">
+                <BarberCard
+                  src={barber.src}
+                  height={barber.height}
+                  width={barber.width}
+                  name={barber.name}
+                />
+              </Link>
             </MotionGrid>
           ))}
         </MotionGrid>

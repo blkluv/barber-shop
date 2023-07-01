@@ -26,7 +26,7 @@ export const Hero = (): React.JSX.Element => {
             delay: 1.4,
           },
         }}
-        className="heading-lg xs:heading-xl md:heading-2xl max-w-3xl px-2 text-center font-bold"
+        className="heading-lg xs:heading-xl lg:heading-2xl max-w-3xl px-2 text-center font-bold"
       >
         Barbershop-ul tau in Iasi
       </motion.h1>
@@ -48,7 +48,7 @@ export const Hero = (): React.JSX.Element => {
         className="row-center link z-10"
       >
         <LocationOnIcon className="accent-secondary mr-1" />
-        <span className="p-base md:p-lg">Strada Aurel Vlaicu 54</span>
+        <span className="p-base lg:p-lg">Strada Aurel Vlaicu 54</span>
       </motion.button>
       <motion.button
         key="schedule-button"

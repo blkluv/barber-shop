@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 import Image from "next/image";
-import Link from "next/link";
 
 import { TRANSITION_PRIMARY } from "@/utils";
 
@@ -21,33 +20,31 @@ const boxProps = {
 
 export const BarberCard = ({ src, width, height, name }: BarberCardProps) => {
   return (
-    <div className="col-center mx-auto h-80 w-full max-w-[200px] grow">
-      <Link href={"/"}>
-        <Box sx={{ position: "relative" }} className="h-full w-full">
-          <Image src={src} alt="" width={width} height={height} />
+    <div className="col-center mx-auto h-80 w-full max-w-[220px] grow">
+      <Box sx={{ position: "relative" }} className="h-full w-full">
+        <Image src={src} alt="" width={width} height={height} />
+        <Box
+          sx={{
+            ...boxProps,
+            transition: TRANSITION_PRIMARY,
+            opacity: 0,
+            "&:hover, &:focus-within": {
+              opacity: 1,
+            },
+          }}
+        >
           <Box
             sx={{
               ...boxProps,
-              transition: TRANSITION_PRIMARY,
-              opacity: 0,
-              "&:hover, &:focus-within": {
-                opacity: 1,
-              },
+              bgcolor: "rgba(0, 0, 0, 0.5)",
+              color: "white",
             }}
+            className="col-center"
           >
-            <Box
-              sx={{
-                ...boxProps,
-                bgcolor: "rgba(0, 0, 0, 0.5)",
-                color: "white",
-              }}
-              className="col-center"
-            >
-              <h3 className="font-bold text-bright">{name}</h3>
-            </Box>
+            <h3 className="font-bold text-bright">{name}</h3>
           </Box>
         </Box>
-      </Link>
+      </Box>
     </div>
   );
 };

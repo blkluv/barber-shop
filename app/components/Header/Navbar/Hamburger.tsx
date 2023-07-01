@@ -14,7 +14,7 @@ export const Hamburger = (): React.JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="center block md:hidden">
+    <div className="center block lg:hidden">
       <MenuButton isOpen={isOpen} setIsOpen={setIsOpen}>
         <MenuRoundedIcon
           sx={{ fontSize: 40, transition: `${TRANSITION_PRIMARY}` }}

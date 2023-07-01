@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
+import Link from "next/link";
 
 import { BARBERS } from "@/utils";
 import { BarberCard } from "./BarberCard";
@@ -26,12 +27,14 @@ export const CardSwiper = () => {
           key={`${index}-${barber.name}`}
           className={"w-35 w-full items-center justify-around md:flex"}
         >
-          <BarberCard
-            src={barber.src}
-            height={barber.height}
-            width={barber.width}
-            name={barber.name}
-          />
+          <Link href={"/"} className="flex">
+            <BarberCard
+              src={barber.src}
+              height={barber.height}
+              width={barber.width}
+              name={barber.name}
+            />
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
