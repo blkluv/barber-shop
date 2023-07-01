@@ -48,3 +48,24 @@ export const GALLERY_PHOTOS = [
   { src: "/images/gallery-photo-8.jpg", width: 1080, height: 1350 },
   { src: "/images/gallery-photo-9.jpg", width: 1080, height: 1080 },
 ];
+
+export const BARBERS = [
+  {
+    name: "Alex",
+    src: "/images/barber-1.jpg",
+    width: 193,
+    height: 290,
+  },
+  {
+    name: "Sara",
+    src: "/images/barber-2.jpg",
+    width: 193,
+    height: 290,
+  },
+  {
+    name: "David",
+    src: "/images/barber-3.jpg",
+    width: 193,
+    height: 290,
+  },
+];

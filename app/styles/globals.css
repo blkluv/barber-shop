@@ -12,6 +12,7 @@
     --color-text-accent-secondary: #e0b185;
     --color-bg-main: #000000;
     --color-bg-secondary: #ffedd5;
+    --color-bg-accent: #e0b185;
     --color-bg-overlay: rgba(0, 0, 0, 0.6);
     --color-btn-hover: #e0b185;
     --color-border-muted: #707070;
@@ -185,3 +186,38 @@ img {
 /* .hero {
   height: calc(100vh - 80px);
 } */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.swiper-wrapper {
+  flex-grow: 1;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--color-bg-accent);
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-bg-accent) !important;
+}

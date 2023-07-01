@@ -5,13 +5,13 @@ import { PAGES, capitalize } from "@/utils";
 
 export const NavLinks = (): React.JSX.Element => {
   return (
-    <ul className="p-base z-10 hidden gap-12 uppercase md:flex">
+    <ul className="p-lg z-10 hidden gap-12 md:flex">
       {PAGES.map((page) => (
         <li key={page.title}>
           <CustomLink
             href={page.title === "acasa" ? "/" : `/${page.title}`}
             title={capitalize(page.title)}
-            classes="underlined relative py-2"
+            classes="underlined relative py-2 font-semibold"
           />
         </li>
       ))}

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const openSans = Open_Sans({
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "600", "700"],
   variable: "--font-openSans",
   subsets: ["latin"],
 });

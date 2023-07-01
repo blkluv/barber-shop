@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
-import { useMapRef } from "@/hooks/useMapRef";
+import { useMapRef } from "@/hooks";
 
 export const Hero = (): React.JSX.Element => {
   const { handleClick } = useMapRef();

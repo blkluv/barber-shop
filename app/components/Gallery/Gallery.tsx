@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
@@ -11,15 +11,15 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
+import { GALLERY_PHOTOS } from "@/utils";
+import { SectionLayout } from "@/components";
 import { CustomImage } from "./CustomImage";
-import { GALLERY_PHOTOS } from "@/utils/constants";
-import { Section } from "../Section";
 
 export const Gallery = (): React.JSX.Element => {
   const [index, setIndex] = useState(-1);
 
   return (
-    <Section
+    <SectionLayout
       title="Galerie"
       subtitle="Creatiile noastre"
       style="container mx-auto mt-12 px-2"
@@ -46,6 +46,6 @@ export const Gallery = (): React.JSX.Element => {
         render={{ slide: CustomImage }}
         plugins={[Thumbnails, Zoom]}
       />
-    </Section>
+    </SectionLayout>
   );
 };

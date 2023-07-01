@@ -6,7 +6,7 @@ import {
 } from "yet-another-react-lightbox";
 import { RenderSlideProps } from "yet-another-react-lightbox/dist/types";
 
-import { getImageHeight, getImageWidth, isNextJsImage } from "@/utils/helpers";
+import { getImageHeight, getImageWidth, isNextJsImage } from "@/utils";
 
 export const CustomImage = ({ slide, rect }: RenderSlideProps) => {
   const { imageFit } = useLightboxProps().carousel;

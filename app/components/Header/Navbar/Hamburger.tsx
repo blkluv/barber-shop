@@ -1,15 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseIcon from "@mui/icons-material/Close";
 
+import { PAGES, capitalize, TRANSITION_PRIMARY } from "@/utils";
 import { CustomLink, SocialLinks } from "@/components";
 import { MenuButton } from "./MenuButton";
-import { PAGES, capitalize } from "@/utils";
-import { TRANSITION_PRIMARY } from "@/utils/constants";
-import Image from "next/image";
 
 export const Hamburger = (): React.JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);

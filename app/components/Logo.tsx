@@ -1,4 +1,8 @@
-export const Logo = ({ sizes }: { sizes: string }): React.JSX.Element => {
+interface LogoProps {
+  sizes: string;
+}
+
+export const Logo = ({ sizes }: LogoProps): React.JSX.Element => {
   return (
     <a href="/">
       <h2 className={`logo ${sizes}`}>

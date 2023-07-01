@@ -1,7 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+
+import { Logo } from "@/components";
 import { Hamburger } from "./Hamburger";
 import { NavLinks } from "./NavLinks";
-import { Logo } from "@/components/Logo";
 
 export const Navbar = (): React.JSX.Element => {
   const { scrollY } = useScroll();
@@ -10,7 +11,7 @@ export const Navbar = (): React.JSX.Element => {
     [0, 100],
     ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"]
   );
-  const height = useTransform(scrollY, [0, 100], [80, 60]);
+  const height = useTransform(scrollY, [0, 100], [100, 60]);
 
   return (
     <motion.nav

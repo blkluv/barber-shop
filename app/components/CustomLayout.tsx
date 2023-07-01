@@ -4,7 +4,7 @@ import { ReactNode, useState } from "react";
 import { LayoutGroup, AnimatePresence, motion } from "framer-motion";
 
 import { Loader } from "@/components";
-import { MapRefProvider } from "@/providers/MapRefProvider";
+import { MapRefProvider } from "@/providers";
 
 export const CustomLayout = ({ children }: { children: ReactNode }) => {
   const [isLoading, setIsLoading] = useState(true);

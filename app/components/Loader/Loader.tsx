@@ -16,7 +16,7 @@ const banner = {
   }),
 };
 
-const letterAni = {
+const letterAnimation = {
   visible: {
     opacity: 1,
     x: 0,
@@ -55,7 +55,7 @@ export const Loader = ({ finishLoading }: LoaderProps): React.JSX.Element => {
         className="heading-lg md:heading-xl text-center"
       >
         {"Sergiu Barbershop".split("").map((letter, index) => (
-          <motion.span key={index} variants={letterAni}>
+          <motion.span key={index} variants={letterAnimation}>
             {letter}
           </motion.span>
         ))}

@@ -1,9 +1,5 @@
-import { Map } from "./Map";
-import { SocialLinks } from "./SocialLinks";
-import { CustomLink } from "./CustomLink";
-import { PAGES, capitalize } from "@/utils";
-import { CONTACTS_LIST, COPYRIGHT } from "@/utils/constants";
-import { Logo } from "./Logo";
+import { PAGES, capitalize, CONTACTS_LIST, COPYRIGHT } from "@/utils";
+import { SocialLinks, CustomLink, Logo } from "@/components";
 
 export const Footer = (): React.JSX.Element => {
   return (

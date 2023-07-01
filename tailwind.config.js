@@ -6,6 +6,7 @@ module.exports = {
       backgroundColor: {
         main: "var(--color-bg-main)",
         secondary: "var(--color-bg-secondary)",
+        accent: "var(--color-bg-accent)",
         overlay: "var(--color-bg-overlay)",
         "btn-hover": "var(--color-btn-hover)",
       },
