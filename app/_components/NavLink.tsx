@@ -12,10 +12,10 @@ interface CustomLinkProps {
 }
 
 export const NavLink = ({
-  classes,
   onClick,
   href,
   title,
+  classes = "",
 }: CustomLinkProps): React.JSX.Element => {
   const currentRoute = usePathname();
 

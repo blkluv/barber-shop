@@ -35,7 +35,7 @@ export const Banner = (): React.JSX.Element => {
     >
       <motion.h1
         variants={item}
-        className="small:heading-lg heading-lg sm:heading-xl lg:heading-2xl max-w-sm px-2 text-center font-bold md:max-w-xl lg:max-w-3xl"
+        className="small:heading-lg heading-lg sm:heading-xl lg:heading-2xl max-w-sm px-6 text-center sm:max-w-xl sm:px-0 lg:max-w-3xl"
       >
         Barbershop-ul tau in Iasi
       </motion.h1>

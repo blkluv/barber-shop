@@ -63,7 +63,7 @@ export const Hamburger = ({
             </motion.div>
             <motion.ul
               key="hamburger"
-              className="col-center gap-4 text-4xl font-bold text-bright small:gap-2 small:text-3xl"
+              className="col-center z-10 gap-4 text-4xl font-bold text-bright small:gap-2 small:text-3xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.2 }}
