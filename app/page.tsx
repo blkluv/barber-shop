@@ -1,12 +1,18 @@
-import { Hero, Gallery, Map, Team } from "@/components";
+import { HeroSection } from "@/_components/HeroSection/HeroSection";
+import { GallerySection } from "@/_components/GallerySection/GallerySection";
+import { TeamSection } from "@/_components/TeamSection/TeamSection";
+import { MapSection } from "@/_components/MapSection/MapSection";
+import { Map } from "@/_components/MapSection/Map";
 
-export default function Page(): React.JSX.Element {
+export default function Home(): React.JSX.Element {
   return (
     <>
-      <Hero />
-      <Gallery />
-      <Team />
-      <Map />
+      <HeroSection />
+      <GallerySection />
+      <TeamSection />
+      <MapSection>
+        <Map />
+      </MapSection>
     </>
   );
 }
