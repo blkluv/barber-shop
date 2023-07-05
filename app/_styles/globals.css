@@ -121,7 +121,7 @@
     @apply transition-primary;
   }
 
-  .link:hover.underlined:before,
+  .link-bright:hover.underlined:before,
   .active.underlined:before,
   .subtitle.underlined:before {
     opacity: 1;
@@ -134,12 +134,16 @@
     px-8 py-2 text-sm uppercase text-dark shadow-xl hover:bg-transparent hover:text-bright sm:text-base md:text-lg small:mt-2;
   }
 
-  .link {
+  .link-bright {
     @apply transition-primary text-bright hover:text-hover;
   }
 
   .link-muted {
     @apply transition-primary text-muted hover:text-white;
+  }
+
+  .link-dark {
+    @apply transition-primary text-dark hover:text-hover;
   }
 
   .image {

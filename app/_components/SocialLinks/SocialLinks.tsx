@@ -6,7 +6,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 export const SocialLinks = (): React.JSX.Element => {
   return (
-    <div className="w-fit">
+    <div className="row-center w-fit gap-2">
       <IconLink>
         <InstagramIcon sx={{ fontSize: "40px" }} />
       </IconLink>

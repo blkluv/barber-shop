@@ -14,7 +14,7 @@ export const Navbar = ({ children }: NavbarProps): React.JSX.Element => {
   const background = useTransform(
     scrollY,
     [0, 100],
-    ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"]
+    ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.8)"]
   );
   const height = useTransform(scrollY, [0, 100], [100, 80]);
 

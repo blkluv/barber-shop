@@ -23,7 +23,9 @@ export const NavLink = ({
     <Link
       onClick={onClick}
       className={
-        currentRoute === href ? `link active ${classes}` : `link ${classes}`
+        currentRoute === href
+          ? `link-bright active ${classes}`
+          : `link-bright ${classes}`
       }
       href={href}
     >

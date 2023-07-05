@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Navbar } from "@/_components/Navbar/Navbar";
 import { Logo } from "@/_components/Logo";
 import { NavLinks } from "@/_components/Navbar/NavLinks";
-import { Hamburger } from "@/_components/Navbar/Hamburger";
+import { Hamburger } from "@/_components/Navbar/Hamburger/Hamburger";
 import { SocialLinks } from "@/_components/SocialLinks/SocialLinks";
 
 export const Header = (): React.JSX.Element => {

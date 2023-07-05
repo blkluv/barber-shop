@@ -2,6 +2,38 @@ export const COPYRIGHT = "© SC Sergiu Barbershop SRL, RO 2545425";
 export const EMAIL = "sergiu.barbershop@gmail.com";
 export const PHONE = "+40761874555";
 export const TRANSITION_PRIMARY = "all 0.3s ease-in-out";
+
+export const SERVICES = [
+  {
+    title: "Tuns",
+    price: "50 RON",
+    description: "",
+    image: "",
+    galleryLink: "",
+  },
+  {
+    title: "Barba",
+    price: "30 RON",
+    description: "",
+    image: "",
+    galleryLink: "",
+  },
+  {
+    title: "Contur barba",
+    price: "20 RON",
+    description: "",
+    image: "",
+    galleryLink: "",
+  },
+  {
+    title: "Tuns + Barba",
+    price: "70 RON",
+    description: "",
+    image: "",
+    galleryLink: "",
+  },
+];
+
 export const PAGES = [
   {
     title: "acasa",

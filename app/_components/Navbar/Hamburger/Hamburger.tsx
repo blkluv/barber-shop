@@ -1,0 +1,43 @@
+"use client";
+
+import { ReactNode, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+
+import { MenuButton } from "../MenuButton";
+import { TRANSITION_PRIMARY } from "@/_lib/constants";
+import { HamburgerMenu } from "./HamburgerMenu";
+
+interface HamburgerProps {
+  socialLinks: ReactNode;
+  children: ReactNode;
+}
+
+export const Hamburger = ({
+  socialLinks,
+  children,
+}: HamburgerProps): React.JSX.Element => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="center block lg:hidden">
+      <MenuButton isOpen={isOpen} setIsOpen={setIsOpen}>
+        <MenuRoundedIcon
+          sx={{ fontSize: 40, transition: `${TRANSITION_PRIMARY}` }}
+          className="hover:text-hover"
+        />
+      </MenuButton>
+      <AnimatePresence>
+        {isOpen && (
+          <HamburgerMenu
+            socialLinks={socialLinks}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+          >
+            {children}
+          </HamburgerMenu>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};

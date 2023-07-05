@@ -1,12 +1,10 @@
-import Head from "next/head";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Echipa | Sergiu Barbershop",
+  description: "Echipa Sergiu Barbershop",
+};
 
 export default function Page(): React.JSX.Element {
-  return (
-    <>
-      <Head>
-        <title>Sergiu Barbershop - Echipa</title>
-      </Head>
-      <h1>Echipa</h1>
-    </>
-  );
+  return <h1>Echipa</h1>;
 }
