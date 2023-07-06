@@ -1,7 +1,10 @@
+import { useGetBannerImage } from "@/_hooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export const HamburgerMenuImage = (): React.JSX.Element => {
+  const bannerImage = useGetBannerImage();
+
   return (
     <motion.div
       initial={{ x: 200, y: -200, opacity: 0 }}
@@ -17,13 +20,15 @@ export const HamburgerMenuImage = (): React.JSX.Element => {
       }}
       className="absolute right-0 top-0 max-h-80 max-w-xs rounded-xl opacity-20"
     >
-      <Image
-        src={"/images/bg.jpg"}
-        alt=""
-        width={612}
-        height={408}
-        className="rounded-bl-full"
-      />
+      {bannerImage && (
+        <Image
+          src={bannerImage.src}
+          alt=""
+          width={bannerImage.width}
+          height={bannerImage.height}
+          className="rounded-bl-full"
+        />
+      )}
     </motion.div>
   );
 };

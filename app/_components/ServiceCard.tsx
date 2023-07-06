@@ -7,6 +7,7 @@ import { IconLink } from "./SocialLinks/IconLink";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import { TRANSITION_PRIMARY } from "@/_lib/constants";
+import { useGetBannerImage } from "@/_hooks";
 
 interface Service {
   title: string;
@@ -29,10 +30,19 @@ export const ServiceCard = ({
 }: {
   service: Service;
 }): React.JSX.Element => {
+  const bannerImage = useGetBannerImage();
+
   return (
     <div className="transition-primary w-full max-w-xs rounded-md bg-slate-300 text-center shadow-lg shadow-[#4e3d2f] hover:scale-95 hover:shadow-2xl hover:shadow-slate-400">
       <Box sx={{ position: "relative" }} className="h-full w-full">
-        <Image src={"/images/bg.jpg"} alt="" width={612} height={408} />
+        {bannerImage && (
+          <Image
+            src={bannerImage.src}
+            alt=""
+            width={bannerImage.width}
+            height={bannerImage.height}
+          />
+        )}
         <Box
           sx={{
             ...boxProps,
