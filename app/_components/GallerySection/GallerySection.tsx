@@ -9,12 +9,13 @@ import Lightbox from "yet-another-react-lightbox";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
-import { GALLERY_PHOTOS } from "@/_lib/constants";
 import { SectionLayout } from "@/_components/SectionLayout";
 import { CustomImage } from "./CustomImage";
+import { useGetGalleryImages } from "@/_hooks";
 
 export const GallerySection = (): React.JSX.Element => {
   const [index, setIndex] = useState(-1);
+  const galleryImages = useGetGalleryImages();
 
   return (
     <SectionLayout
@@ -24,7 +25,7 @@ export const GallerySection = (): React.JSX.Element => {
     >
       <PhotoAlbum
         layout="rows"
-        photos={GALLERY_PHOTOS}
+        photos={galleryImages ?? []}
         onClick={({ index: current }) => setIndex(current)}
         componentsProps={() => ({
           imageProps: { className: "image" },
@@ -33,7 +34,7 @@ export const GallerySection = (): React.JSX.Element => {
 
       <Lightbox
         index={index}
-        slides={GALLERY_PHOTOS}
+        slides={galleryImages}
         open={index >= 0}
         close={() => setIndex(-1)}
         render={{ slide: CustomImage }}

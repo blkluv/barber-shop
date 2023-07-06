@@ -10,10 +10,12 @@ import Link from "next/link";
 
 import "./styles.css";
 
-import { TEAM_MEMBERS } from "@/_lib/constants";
 import { TeamMemberCard } from "../TeamMemberCard";
+import { useGetBarberImages } from "@/_hooks";
 
 export const TeamSwiper = () => {
+  const barberImages = useGetBarberImages();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -32,17 +34,17 @@ export const TeamSwiper = () => {
           disableOnInteraction: false,
         }}
       >
-        {TEAM_MEMBERS.map((teamMember, index) => (
+        {barberImages.map((barber, index) => (
           <SwiperSlide
-            key={`${index}-${teamMember.name}`}
+            key={`${index}-${barber.name}`}
             className={"w-35 w-full items-center justify-around md:flex"}
           >
             <Link href={"/"} className="flex">
               <TeamMemberCard
-                src={teamMember.src}
-                height={teamMember.height}
-                width={teamMember.width}
-                name={teamMember.name}
+                src={barber.src}
+                height={barber.height}
+                width={barber.width}
+                name={barber.name}
               />
             </Link>
           </SwiperSlide>

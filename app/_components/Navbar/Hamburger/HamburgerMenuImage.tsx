@@ -1,13 +1,7 @@
-import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-interface HamburgerMenuImageProps {
-  children: ReactNode;
-}
-
-export const HamburgerMenuImage = ({
-  children,
-}: HamburgerMenuImageProps): React.JSX.Element => {
+export const HamburgerMenuImage = (): React.JSX.Element => {
   return (
     <motion.div
       initial={{ x: 200, y: -200, opacity: 0 }}
@@ -23,7 +17,13 @@ export const HamburgerMenuImage = ({
       }}
       className="absolute right-0 top-0 max-h-80 max-w-xs rounded-xl opacity-20"
     >
-      {children}
+      <Image
+        src={"/images/bg.jpg"}
+        alt=""
+        width={612}
+        height={408}
+        className="rounded-bl-full"
+      />
     </motion.div>
   );
 };

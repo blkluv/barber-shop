@@ -32,7 +32,7 @@ export const ServiceCard = ({
   return (
     <div className="transition-primary w-full max-w-xs rounded-md bg-slate-300 text-center shadow-lg shadow-[#4e3d2f] hover:scale-95 hover:shadow-2xl hover:shadow-slate-400">
       <Box sx={{ position: "relative" }} className="h-full w-full">
-        <Image src={"/images/bg.jpg"} alt="" width={4000} height={6000} />
+        <Image src={"/images/bg.jpg"} alt="" width={612} height={408} />
         <Box
           sx={{
             ...boxProps,

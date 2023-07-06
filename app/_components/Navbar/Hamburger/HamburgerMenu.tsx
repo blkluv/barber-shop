@@ -1,15 +1,14 @@
 import { motion } from "framer-motion";
-import { Dispatch, ReactNode, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 import { PAGES } from "@/_lib/constants";
 import { capitalize } from "@/_lib/utils";
 import { NavLink } from "@/_components/NavLink";
 import { HamburgerMenuImage } from "./HamburgerMenuImage";
 import { CloseMenuButton } from "./CloseMenuButton";
+import { SocialLinks } from "@/_components/SocialLinks/SocialLinks";
 
 interface HamburgerMenuProps {
-  children: ReactNode;
-  socialLinks: ReactNode;
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
@@ -37,8 +36,6 @@ const item = {
 };
 
 export const HamburgerMenu = ({
-  children,
-  socialLinks,
   isOpen,
   setIsOpen,
 }: HamburgerMenuProps): React.JSX.Element => {
@@ -57,7 +54,7 @@ export const HamburgerMenu = ({
       }}
       className="col-center fixed left-0 top-0 z-10 h-screen w-full bg-main"
     >
-      <HamburgerMenuImage>{children}</HamburgerMenuImage>
+      <HamburgerMenuImage />
       <CloseMenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
       <motion.ul
         key="hamburger"
@@ -68,11 +65,11 @@ export const HamburgerMenu = ({
         className="col-center z-10 gap-4 text-4xl font-bold text-bright small:gap-2 small:text-3xl"
       >
         {PAGES.map((page) => (
-          <motion.li key={page.title} variants={item}>
+          <motion.li key={page} variants={item}>
             <NavLink
               onClick={() => setIsOpen(false)}
-              href={page.title === "acasa" ? "/" : `/${page.title}`}
-              title={capitalize(page.title)}
+              href={page === "acasa" ? "/" : `/${page}`}
+              title={capitalize(page)}
             />
           </motion.li>
         ))}
@@ -91,7 +88,7 @@ export const HamburgerMenu = ({
           }}
           className="mt-8 flex gap-2"
         >
-          {socialLinks}
+          <SocialLinks />
         </motion.li>
       </motion.ul>
     </motion.div>

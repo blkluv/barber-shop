@@ -4,8 +4,8 @@ import Link from "next/link";
 import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
 
-import { TEAM_MEMBERS } from "@/_lib/constants";
 import { TeamMemberCard } from "@/_components/TeamSection/TeamMemberCard";
+import { useGetBarberImages } from "@/_hooks";
 
 const MotionGrid = motion(Grid);
 
@@ -25,6 +25,8 @@ const item = {
 };
 
 export const TeamGrid = (): React.JSX.Element => {
+  const barberImages = useGetBarberImages();
+
   return (
     <div className="mx-auto hidden w-full max-w-5xl py-10 md:flex">
       <MotionGrid
@@ -36,10 +38,10 @@ export const TeamGrid = (): React.JSX.Element => {
         initial="hidden"
         whileInView="show"
       >
-        {TEAM_MEMBERS.map((teamMember, index) => (
+        {barberImages.map((barber, index) => (
           <MotionGrid
             variants={item}
-            key={`${index}-${teamMember.name}`}
+            key={`${index}-${barber.name}`}
             className="w-full"
             item
             xs={2}
@@ -48,10 +50,10 @@ export const TeamGrid = (): React.JSX.Element => {
           >
             <Link href={"/"} className="flex">
               <TeamMemberCard
-                src={teamMember.src}
-                height={teamMember.height}
-                width={teamMember.width}
-                name={teamMember.name}
+                src={barber.src}
+                height={barber.height}
+                width={barber.width}
+                name={barber.name}
               />
             </Link>
           </MotionGrid>

@@ -14,10 +14,10 @@ export const NavLinks = ({
   return (
     <ul className={listStyles}>
       {PAGES.map((page) => (
-        <li key={page.title}>
+        <li key={page}>
           <NavLink
-            href={page.title === "acasa" ? "/" : `/${page.title}`}
-            title={capitalize(page.title)}
+            href={page === "acasa" ? "/" : `/${page}`}
+            title={capitalize(page)}
             classes={linkStyles}
           />
         </li>
