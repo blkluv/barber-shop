@@ -2,12 +2,12 @@
 
 import CollectionsIcon from "@mui/icons-material/Collections";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import { IconLink } from "./SocialLinks/IconLink";
+import { IconLink } from "../SocialLinks/IconLink";
 
 import { Box } from "@mui/material";
 import Image from "next/image";
 import { TRANSITION_PRIMARY } from "@/_lib/constants";
-import { useGetBannerImage } from "@/_hooks";
+import { Image as ImageType } from "@/_types";
 
 interface Service {
   title: string;
@@ -15,6 +15,11 @@ interface Service {
   description: string;
   image: string;
   galleryLink: string;
+}
+
+interface ServiceCardProps {
+  service: Service;
+  bgImage: ImageType | undefined;
 }
 
 const boxProps = {
@@ -27,20 +32,17 @@ const boxProps = {
 
 export const ServiceCard = ({
   service,
-}: {
-  service: Service;
-}): React.JSX.Element => {
-  const bannerImage = useGetBannerImage();
-
+  bgImage,
+}: ServiceCardProps): React.JSX.Element => {
   return (
     <div className="transition-primary w-full max-w-xs rounded-md bg-slate-300 text-center shadow-lg shadow-[#4e3d2f] hover:scale-95 hover:shadow-2xl hover:shadow-slate-400">
       <Box sx={{ position: "relative" }} className="h-full w-full">
-        {bannerImage && (
+        {bgImage && (
           <Image
-            src={bannerImage.src}
+            src={bgImage.src}
             alt=""
-            width={bannerImage.width}
-            height={bannerImage.height}
+            width={bgImage.width}
+            height={bgImage.height}
           />
         )}
         <Box
