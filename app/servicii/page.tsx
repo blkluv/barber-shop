@@ -1,5 +1,6 @@
 import { SectionLayout } from "@/_components/SectionLayout";
-import { ServicesSection } from "@/_components/ServicesSection/ServicesSection";
+import { ServiceCard } from "@/_components/ServiceCard";
+import { SERVICES } from "@/_lib/constants";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +14,11 @@ export default function Services(): React.JSX.Element {
       title="Servicii"
       subtitle="Acestea sunt serviciile oferite de noi"
     >
-      <ServicesSection />
+      <div className="row-center flex-wrap gap-6">
+        {SERVICES.map((service) => (
+          <ServiceCard service={service} key={service.title} />
+        ))}
+      </div>
     </SectionLayout>
   );
 }

@@ -17,13 +17,29 @@ export const SectionLayout = forwardRef<HTMLDivElement, SectionProps>(
   ): React.JSX.Element {
     return (
       <section className={`px-2 py-14 ${style}`} ref={ref}>
-        <h2 className="accent-secondary heading-lg md:heading-xl mx-auto w-fit">
+        <motion.h2
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="accent-secondary heading-lg md:heading-xl mx-auto w-fit"
+        >
           {title}
-        </h2>
-        <h3 className="p-sm md:p-lg subtitle underlined relative mx-auto mb-24 w-fit py-2 text-muted">
+        </motion.h2>
+        <motion.h3
+          initial={{ x: -150, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+          className="p-sm md:p-lg subtitle underlined relative mx-auto mb-24 w-fit py-2 text-muted"
+        >
           {subtitle}
-        </h3>
-        <div>{children}</div>
+        </motion.h3>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+        >
+          {children}
+        </motion.div>
       </section>
     );
   }

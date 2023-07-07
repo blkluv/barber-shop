@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
 import { MenuButton } from "../MenuButton";
@@ -18,7 +19,9 @@ export const Hamburger = ({}): React.JSX.Element => {
           className="hover:text-hover"
         />
       </MenuButton>
-      {isOpen && <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />}
+      <AnimatePresence>
+        {isOpen && <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />}
+      </AnimatePresence>
     </div>
   );
 };
