@@ -17,7 +17,12 @@ export const TeamSwiper = () => {
   const barberImages = useGetBarberImages();
 
   return (
-    <div className="md:hidden">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.4, delay: 0.4 }}
+      className="md:hidden"
+    >
       <Swiper
         navigation={true}
         modules={[Autoplay, Navigation]}
@@ -45,6 +50,6 @@ export const TeamSwiper = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </motion.div>
   );
 };
