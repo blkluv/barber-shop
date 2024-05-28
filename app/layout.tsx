@@ -17,7 +17,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="ro">
+    <html lang="en">
       <body className={`${openSans.variable}`}>
         <CustomLayout>
           <Header />
